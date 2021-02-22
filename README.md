@@ -1,5 +1,5 @@
 # Sekripsi
-Project manusia malas
+## Project manusia malas
 =======================================
 
 Version 1.0.0;
