@@ -3,34 +3,27 @@
 <head>
     <?php
     // header("refresh: 5");
-    include('assets/desain.php');
+    include('desain.php');
     ?>
+
+    <style>
+         body{
+             background-image: url('assets/background.jpg');
+             background-position: center;
+             z-index: 9999;
+         }
+    </style>
 </head>
 
 <body>
-    <div class="container col-lg-4">
-        <br>
-        <h3 class="text-center text-primary"><STRONG>SiPakonik</STRONG></h3>
-        <P class="text-center">Menggunakan <Strong>PH Sensor</Strong>, <strong>TDS Turbidity</strong> Sensor, dan <strong>Suhu</strong> DS18B20.</P>
-        <br>
+    <div class="container login">
+    <div class="container col-sm">
+        <div class="logo text-center">
+            <img src="assets/Logo_LAZULA.png" alt="lazula">
+        </div>
 
-        <?php
-        if (isset($_GET['pesan'])) {
-            if ($_GET['pesan'] == "gagal") {
-                echo "<div class='alert alert-sm alert-danger'>" . "Login gagal! username dan password salah!" . "</div>";
-            } else if ($_GET['pesan'] == "logout") {
-                echo "<div class='alert alert-primary'>" . "Anda telah berhasil logout" . "</div>";
-            } else if ($_GET['pesan'] == "belum_login") {
-                echo "<div class='alert alert-warning'>" . "Anda harus login untuk mengakses halaman admin" . "</div>";
-            }
-        }
-        ?>
-    </div>
-
-    <div class="container col-lg-3">
         <br>
-        <h4 class="mb-3" style="text-align:center;">Silakan Login</h4>
-        <form method="POST" action="config/loginProses.php">
+        <form method="POST" action="loginProses.php">
             <div class="form-group">
                 <label><b>Username </b></label>
                 <input type="text" class="form-control" name="username" placeholder="Masukan Username..">
@@ -39,9 +32,27 @@
                 <label><b>Password</b></label>
                 <input type="password" class="form-control" name="password" placeholder="Masukan Password..">
             </div>
-            <button class="btn btn-primary">Login</button>
+            
+            <button class="btn btn-outline-success btn-block">Login</button>
+            
+            
         </form>
+
+        <?php
+        if (isset($_GET['pesan'])) {
+        if ($_GET['pesan'] == "gagal") {
+            echo "<div class='alert alert-sm alert-danger'>" . "Login gagal! username dan password salah!" . "</div>";
+        } else if ($_GET['pesan'] == "logout") {
+            echo "<div class='alert alert-primary'>" . "Anda telah berhasil logout" . "</div>";
+        } else if ($_GET['pesan'] == "belum_login") {
+            echo "<div class='alert alert-warning'>" . "Anda harus login untuk mengakses halaman admin" . "</div>";
+        }
+        }
+        ?>
     </div>
+    
+    <?php include('bootstrapScript.php'); ?>
+    
 </body>
 
 </html>

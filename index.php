@@ -3,24 +3,25 @@
 <head>
     <?php
     // header("refresh: 5");
-    include('assets/desain.php');
+    include('desain.php');
     ?>
 </head>
 
 <body>
-    <div class="container">
-        <br>
-        <h3 class="text-center text-primary"><STRONG>SiPakonik</STRONG></h3>
-        <P class="text-center">Menggunakan <Strong>PH Sensor</Strong>, <strong>TDS Turbidity</strong> Sensor, dan <strong>Suhu</strong> DS18B20.</P>
-        <br>
+    <!-- Preloader page-->
+    <div class="loader">
+        <div class="load"></div>
     </div>
+    
 
-    <?php include('assets/navbar.php'); ?>
+    <?php 
+        include('header.php');
+        include('navbar.php'); ?>
 
     <div class="container">
         <br><br>
         <?Php
-        include('config/koneksi.php');
+        include('koneksi.php');
 
         $data           = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 1");
         $row            = mysqli_fetch_array($data);

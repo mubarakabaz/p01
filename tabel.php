@@ -3,7 +3,7 @@
 <head>
     <?php
     // header("refresh: 5");
-    include('assets/desain.php');
+    include('desain.php');
     ?>
 </head>
 
@@ -14,7 +14,7 @@
         <P class="text-center">Menggunakan <Strong>PH Sensor</Strong>, <strong>TDS Turbidity</strong> Sensor, dan <strong>Suhu</strong> DS18B20.</P>
         <br>
 
-        <?php include('assets/navbar.php'); ?>
+        <?php include('navbar.php'); ?>
 
         <br>
 
@@ -38,7 +38,7 @@
                         </tr>
                     </thead>
                     <?php
-                    include('config/koneksi.php');
+                    include('koneksi.php');
                     $no = 0;
                     $data = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 20");
                     while ($row        = mysqli_fetch_array($data)) {

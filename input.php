@@ -1,5 +1,5 @@
 <?php
-include('config/koneksi.php');
+include('koneksi.php');
 
 //Ambil Data dari GET Alat
 $ph             = $_GET['ph'];
@@ -10,7 +10,7 @@ $pompaNutrisi   = $_GET['n'];
 $pompaAirBaku   = $_GET['ab'];
 
 //Tanggal dan Waktu
-date_default_timezone_set('Asia/Makassar');
+date_default_timezone_set('Asia/Jakarta');
 $tanggal    = date('d-m-Y');
 $waktu      = date('H:i:s');
 

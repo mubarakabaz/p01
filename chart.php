@@ -1,8 +1,8 @@
 <canvas id="myChart"></canvas>
 
 <?php
-include('config/koneksi.php');
-include('assets/desain.php');
+include('koneksi.php');
+include('desain.php');
 $data1 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 20");
 $data2 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 20");
 $data3 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 20");
