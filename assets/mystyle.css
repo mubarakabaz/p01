@@ -1,7 +1,11 @@
+#login-page {
+    background-color: honeydew;
+}
+
 .login {
     margin-top: 200px;
 }
 
 .logo img {
-    width: 200px auto;
+    width: 100px auto;
 }
